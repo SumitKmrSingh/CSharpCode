@@ -39,29 +39,41 @@ namespace C_Practice
                 Console.Write(arr[i]+" ");
             }
 
-            getAscendingOrder(arr);
+            //getAscendingOrder(arr);
+
+            Console.WriteLine();
+            sumOfArrayElement(arr);
         }
 
-        public static void getAscendingOrder(int[] arr)
-        {
-            for (int i = 0; i < arr.Length; i++)
+        public static void sumOfArrayElement(int[] arr) {
+            int sum=0;
+            for(int i=0; i < arr.Length; i++)
             {
-                for (int j = i+1; j < arr.Length-1; j++)
-                {
-                    if (arr[i] > arr[j])
-                    {
-                        int temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
-                    }
-                }
+                sum += arr[i];
             }
-            Console.WriteLine();
-            Console.WriteLine("Array Elements after Sorting : ");
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + " ");
-            }
+            Console.WriteLine("Sum of array Elements : " + sum);
         }
+
+        //public static void getAscendingOrder(int[] arr)
+        //{
+        //    for (int i = 0; i < arr.Length; i++)
+        //    {
+        //        for (int j = i+1; j < arr.Length-1; j++)
+        //        {
+        //            if (arr[i] > arr[j])
+        //            {
+        //                int temp = arr[i];
+        //                arr[i] = arr[j];
+        //                arr[j] = temp;
+        //            }
+        //        }
+        //    }
+        //    Console.WriteLine();
+        //    Console.WriteLine("Array Elements after Sorting : ");
+        //    for (int i = 0; i < arr.Length; i++)
+        //    {
+        //        Console.Write(arr[i] + " ");
+        //    }
+        //}
     }  
 }
